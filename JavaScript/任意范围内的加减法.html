@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+    }
+
+    .box {}
+
+    .box h {}
+
+    .box li {
+      float: left;
+      display: inline-block;
+      width: 100px;
+      height: 40px;
+      margin-left: 10px;
+      margin-top: 10px;
+      color: #2c2c2c;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <h>hello</h>
+  </div>
+</body>
+<script>
+  var ran = parseInt(prompt('请输入范围'))
+  var num = parseInt(prompt('请输入数量'))
+  if (ran < 10) {
+    ran = 10
+  }
+  function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+  }
+  var first = 0
+  var second = 0
+  var answer = 0
+  var r = 0
+  var d = 0
+  var str = ''
+  var str1 = ''
+  for (i = 0; i < num; i++) {
+    first = getRandomInt(5, ran - 10)
+    second = getRandomInt(5, ran - first)
+    answer = first - second
+    if (answer < 0) {
+      answer = first + second
+      str1 = first + '+' + second + '='
+    } else {
+      str1 = first + '-' + second + '='
+    }
+    str1 = '<li>' + str1 + '&nbsp; &nbsp;</li>'
+    str = str + str1
+    //document.write(str + '&nbsp; &nbsp;<br/>')
+    console.log(answer);
+  }
+  var text = document.querySelector('h')
+  text.innerHTML = str
+</script>
+
+</html>

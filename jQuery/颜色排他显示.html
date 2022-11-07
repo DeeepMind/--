@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .content {
+            width: 250px;
+            height: 300px;
+            background-color: #f2f2f2;
+        }
+
+        .left {
+            float: left;
+        }
+
+        .left li {
+            height: 30px;
+            width: 50px;
+            margin-top: 5px;
+            border: 2px #535353 solid;
+            text-align: center;
+        }
+
+        .right {
+            float: left;
+            height: 300px;
+            width: 190px;
+        }
+
+        .corlor1 {
+            display: none;
+            background-color: red;
+        }
+
+        .corlor2 {
+            display: none;
+            background-color: yellow;
+        }
+
+        .corlor3 {
+            display: none;
+            background-color: blue;
+        }
+    </style>
+    <script src="../jQuery.js"></script>
+    <script>
+        $(function () {
+            $('.left>li').mouseover(function () {
+                var index = $(this).index()
+                $('.right').eq(index + 1).siblings('.right').hide()
+                $('.right').eq(index + 1).show()
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="left">
+            <li>红色</li>
+            <li>黄色</li>
+            <li>蓝色</li>
+        </div>
+        <div class="right">
+            <div class=" right corlor1"></div>
+            <div class=" right corlor2"></div>
+            <div class=" right corlor3"></div>
+        </div>
+    </div>
+</body>
+
+</html>

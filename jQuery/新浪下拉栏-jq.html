@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+            text-align: center;
+            line-height: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333333;
+        }
+
+        .nav>li {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 30px;
+            background-color: #f2f2f2;
+        }
+
+        .nav li ul {
+            display: none;
+            position: absolute;
+            top: 30px;
+            left: 10px;
+        }
+    </style>
+    <script>
+        $(function () {
+            //第一种写法
+            /*             $('.nav>li').mouseenter(function () {
+                            $(this).children('ul').slideDown(100)
+                        }) 
+                         $('.nav>li').mouseleave(function () {
+                            $(this).children('ul').slideUp(100)
+                        }) */
+            //第二种写法
+            /*             $('.nav>li').hover(function () {
+                            $(this).children('ul').slideDown(100)
+                        }, function () {
+                            $(this).children('ul').slideUp(100)
+                        }) */
+            //第三种写法,添加了stop动画,写在动画前面
+            $('.nav>li').hover(function () {
+                $(this).children('a').css({
+                    color: 'red'
+                })
+                $(this).css('backgroundColor', '#2222')
+                $(this).children('ul').stop().slideToggle(100)
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="nav">
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>私信</li>
+                <li>私信</li>
+                <li>私信</li>
+                <li>私信</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>私信</li>
+                <li>私信</li>
+                <li>私信</li>
+                <li>私信</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>私信</li>
+                <li>私信</li>
+                <li>私信</li>
+                <li>私信</li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">微博</a>
+            <ul>
+                <li>私信</li>
+                <li>私信</li>
+                <li>私信</li>
+                <li>私信</li>
+            </ul>
+        </li>
+    </div>
+</body>
+
+</html>

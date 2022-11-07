@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../lib/fullpage.min.css">
+    <script src="../lib/jQuery.js"></script>
+    <script src="../lib/fullpage.min.js"></script>
+    <style>
+        .section {
+            text-align: center;
+            font-size: 3em;
+
+            /* This is important to make the button position relative to the section*/
+            position: relative;
+        }
+
+        .section .bg {
+            position: absolute;
+            top: -35px;
+            height: 100%;
+            width: 100%;
+            background: url(img/2.jpg) no-repeat;
+            background-position: 0 35px;
+            box-shadow: -10px 10px 15px -4px rgba(0, 0, 0, .2);
+        }
+
+        .bg .text {
+            position: absolute;
+            top: -300px;
+            left: 186px;
+            color: aliceblue;
+            z-index: 50;
+            transition: all 1.5s;
+        }
+
+        .active .bg .text {
+            top: 136px;
+            opacity: 1;
+            transition-delay: .7s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="section">
+            <div class="bg">
+                <div class="text">
+                    <h1>形式的意味</h1>
+                </div>
+            </div>
+        </div>
+        <div class="section"></div>
+        <div class="section">
+            <div class="slide" data-anchor="silde2">222</div>
+            <div class="slide" data-anchor="silde3">333</div>
+            <div class="slide" data-anchor="silde1">111</div>
+        </div>
+        <div class="section"></div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $('#fullpage').fullpage({
+                sectionsColor: ['#c87d2d', 'blue', 'red', 'black'],
+                navigation: [true],
+                navigationPostion: ['right'],
+            })
+        })
+    </script>
+</body>
+
+</html>

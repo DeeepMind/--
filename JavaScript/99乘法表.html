@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--     <script>
+        var str = '';
+        var num = prompt('请输入范围');
+        for (i = 1; i <= num; i++) {
+            for (j = 1; j <= i; j++) {
+                str += j + '×' + i + '=' + j * i;
+                str += '&nbsp;&nbsp;';
+            }
+            str += '<br/>';
+        }
+        document.write('<h1 align="center">' + num + '×' + num + '乘法口诀表</h1>')
+        document.write(str)
+    </script> -->
+    <style>
+        body {
+            margin: 90px;
+            background-color: #f2f2f2;
+        }
+
+        table {
+            font-size: 18px;
+            text-align: left;
+            color: #333333;
+        }
+
+        th,
+        td {
+            width: 80px;
+            height: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tbody>
+
+        </tbody>
+    </table>
+</body>
+<script>
+    var num = prompt('请输入范围')
+    var str = ''
+    var tbody = document.querySelector('tbody')
+    for (var i = 1; i <= num; i++) {
+        var tr = document.createElement('tr')
+        tbody.appendChild(tr)
+        for (j = 1; j <= i; j++) {
+            var td = document.createElement('td')
+            tr.appendChild(td)
+            str = j + '×' + i + '=' + j * i;
+            td.innerHTML = str
+        }
+    }
+</script>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        body {
+            padding-top: 150px;
+            background-color: #f2f2f2;
+        }
+
+        .banner {
+            position: relative;
+            width: 936px;
+            height: 330px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .banner ul {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 700%;
+        }
+
+        .banner ul li {
+            float: left;
+        }
+
+        .banner ul li img {
+            width: 936px;
+        }
+
+        .pre,
+        .next {
+            display: none;
+            position: absolute;
+            top: 150px;
+            width: 30px;
+            height: 30px;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .pre a,
+        .next a {
+            color: #c0c0c0;
+        }
+
+        .pre {
+            left: 0;
+        }
+
+        .pre a:hover,
+        .next a:hover {
+            color: #ffff;
+        }
+
+        .next {
+            right: 0;
+        }
+
+        .circle {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            width: 100px;
+            margin-left: -50px;
+            text-align: center;
+        }
+
+        .circle li {
+            display: inline-block;
+            width: 6px;
+            height: 6px;
+            margin-left: 6px;
+            border-radius: 50%;
+            background-color: rgba(148, 145, 145, 0.3);
+        }
+
+        .circle .select {
+            background-color: #fff;
+        }
+    </style>
+    <script src="js/animate.js"></script>
+    <script src="js/index-js.js"></script>
+</head>
+
+<body>
+    <div class="banner">
+        <ul>
+            <li><img src="img/无印良品地平线海报1.jpg"></li>
+            <li><img src="img/无印良品地平线海报2.jpg"></li>
+            <li><img src="img/无印良品地平线海报3.jpg"></li>
+            <li><img src="img/无印良品地平线海报4.jpg"></li>
+            <li><img src="img/无印良品地平线海报5.jpg"></li>
+            <li><img src="img/无印良品地平线海报6.jpg"></li>
+        </ul>
+        <div class="pre">
+            <a href="javascript:;">&lt;</a>
+        </div>
+        <div class="next">
+            <a href="javascript:;">&gt;</a>
+        </div>
+        <ol class="circle">
+        </ol>
+    </div>
+</body>
+
+</html>

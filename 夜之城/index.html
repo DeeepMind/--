@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+            pointer-events: none;
+        }
+
+        #video {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <video id="video" autoplay muted loop id="Video">
+        <source src="" type="video/webm">
+    </video>
+</body>
+<script>
+    //废案
+    /*     var nowTime = Date.now() / 1000
+        console.log(nowTime);
+        var video = document.querySelector('#video')
+        var h = parseInt(nowTime / 60 / 60 % 24)
+        var s = parseInt(nowTime % 86400)
+        var cutTime = parseInt(s / 7.4)
+        console.log(h);
+        console.log(s);
+        console.log(nowTime);
+        console.log(cutTime)
+        if (cutTime <= 3892) {
+            cutTime = cutTime + 5778
+        } else {
+            cutTime = cutTime - 3892
+        }
+        video.currentTime = 9600
+        console.log(cutTime) */
+    var video = document.querySelector('#video')
+    var video = document.querySelector('#video')
+    function getTime() {
+        var h = new Date().getHours()
+        if (h >= 6 && h < 8) {
+            video.src = 'video/清晨.webm'
+        } else if (h >= 8 && h < 11) {
+            video.src = 'video/上午.webm'
+        } else if (h >= 11 && h < 13) {
+            video.src = 'video/中午.webm'
+        } else if (h >= 13 && h < 16) {
+            video.src = 'video/下午.webm'
+        }
+        else if (h >= 16 && h < 18) {
+            video.src = 'video/傍晚.webm'
+        }
+        else {
+            video.src = 'video/夜晚.webm'
+        }
+    }
+    getTime()
+    setInterval(getTime, 600000)
+</script>
+
+</html>

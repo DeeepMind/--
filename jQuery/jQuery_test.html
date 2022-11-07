@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery.js"></script>
+    <style>
+        .box {
+            margin: 20px;
+            width: 200px;
+            height: 200px;
+            background-color: royalblue;
+        }
+    </style>
+</head>
+<script>
+    //可以放在前面的格式
+    /*     $(function () {
+            $('.box').css("background", 'pink')
+        }) */
+</script>
+
+<body>
+    <div class="box">
+
+    </div>
+    <div class="box">
+
+    </div>
+</body>
+<script>
+    //直接使用，需要在目标后面
+    //$('.box').hide()
+    var box = document.querySelectorAll('.box')
+    console.log(box)
+    for (i = 0; i < box.length; i++) {
+        box[i].style.backgroundColor = 'pink'
+
+    }
+</script>
+
+</html>

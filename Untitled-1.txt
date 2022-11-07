@@ -1,0 +1,6 @@
+
+git config --global user.name "DeeepMind"
+git config --global user.email "1738388243@qq.com"
+test
+test 2
+test 3

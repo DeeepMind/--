@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../jQuery.js"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .box {
+            display: block;
+            margin: 100px auto;
+            height: 150px;
+            width: 900px;
+            background-color: #dddddd96;
+        }
+
+        ul {
+            display: flex;
+            height: 150px;
+            width: 850px;
+            margin: 0 auto;
+            justify-content: space-between;
+            /* 水平均匀分布 */
+            align-items: center;
+            /* 垂直居中 */
+        }
+
+        ul li {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: rgb(165, 165, 165);
+        }
+    </style>
+    <script>
+        $(function () {
+            $('li').hover(function () {
+                $(this).stop().animate({ width: '200px' }, 100)
+            },
+                function () {
+                    $(this).stop().animate({ width: '100px' }, 100)
+                }
+            )
+        })
+    </script>
+</head>
+
+<body>
+    <div class="box">
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

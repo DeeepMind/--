@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+
+        .w {
+            width: 1200px;
+            margin: 10px auto;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .header {
+            height: 85px;
+            background-color: #ccc;
+            line-height: 85px;
+        }
+
+        .banner {
+            height: 240px;
+            background-color: #9c9c9c;
+            line-height: 240px;
+        }
+
+        .main {
+            height: 1800px;
+            background-color: #6b6a6a;
+            line-height: 500px;
+        }
+
+        .silderbar {
+            position: absolute;
+            left: 82%;
+            top: 355px;
+            width: 100px;
+            height: 250px;
+            background-color: red;
+        }
+
+        .skipTop {
+            display: none;
+            margin-top: 120px;
+            border-top: #f2f2f2 solid 3px;
+        }
+    </style>
+    <script>
+        window.addEventListener('load', function () {
+            var silderbar = document.querySelector('.silderbar')
+            var banner = document.querySelector('.banner')
+            var main = document.querySelector('.main')
+            var skip = silderbar.querySelector('.skipTop')
+            var box = document.querySelector('.box1')
+            var mainTop = main.offsetTop
+            document.addEventListener('scroll', function () {
+                if (window.pageYOffset >= mainTop) {
+                    silderbar.style.position = 'fixed'
+                    silderbar.style.top = '15px'
+                    skip.style.display = 'block'
+                } else {
+                    silderbar.style.position = 'absolute'
+                    silderbar.style.top = '355px'
+                    skip.style.display = 'none'
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="box1 w">
+        <div class="header w">
+            header
+        </div>
+        <div class="banner w">
+            banner
+        </div>
+        <div class="main w">
+            main
+        </div>
+        <div class="silderbar">
+            推荐
+            <div class="skipTop">
+                TOP
+                ▲
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

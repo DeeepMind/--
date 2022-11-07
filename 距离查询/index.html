@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width">
+    <link rel="stylesheet" href="https://a.amap.com/jsapi_demos/static/demo-center/css/demo-center.css" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <title>地图显示</title>
+    <style>
+        html,
+        body,
+        #container {
+            width: 100%;
+            height: 100%;
+        }
+
+        #panel {
+            position: absolute;
+            background-color: white;
+            max-height: 90%;
+            overflow-y: auto;
+            top: 30px;
+            right: 10px;
+            width: 380px;
+        }
+
+        .tab {
+            position: absolute;
+
+            right: 30px;
+            top: 10px;
+
+        }
+
+        .tab .title {
+            float: left;
+            margin-right: 10px;
+        }
+
+        .tab .active {
+            background: rgb(80, 78, 78);
+        }
+
+        table {
+            position: absolute;
+            right: 30px;
+            top: 30px;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th,
+        td {
+            border: 1px solid #333;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container"></div>
+    <div class="tab">
+        <div class="title active">火车站</div>
+        <div class="title">汽车站</div>
+        <div class="title">快递中转站</div>
+        <div class="title">批发市场</div>
+        <div class="title">农产品加工</div>
+        <div class="title">码头</div>
+        <div class="title">景区</div>
+    </div>
+    <div id="panel"></div>
+    <table>
+        <thead>
+            <tr bgcolor="gray">
+                <th>名称</th>
+                <th>距离(单位：Km)</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <!-- 加载地图JSAPI脚本 -->
+    <script type="text/javascript">
+        window._AMapSecurityConfig = {
+            securityJsCode: '1ae16bef88b07b0dba85902a3f50e524',
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://webapi.amap.com/maps?v=2.0&key=331f465b12fd3c9a3ca8e8f30af0f8a8"></script>
+    <script>
+        var map = new AMap.Map('container', {
+            viewMode: '2D', // 默认使用 2D 模式，如果希望使用带有俯仰角的 3D 模式，请设置 viewMode: '3D',
+            zoom: 15, //初始化地图层级
+        });
+    </script>
+
+    <script src="plugin.js"></script>
+    <script>
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        body {
+            padding-left: 30%;
+        }
+    </style>
+    <script src="../jQuery.js"></script>
+    <script>
+        $(function () {
+            $('.checkall').change(function () {
+                $('.check ,.checkall').prop('checked', $(this).prop('checked'))
+            })
+            $('.check').change(function () {
+                if ($('.check:checked').length == $('.check').length) {
+                    $('.checkall').prop('checked', true)
+                } else {
+                    $('.checkall').prop('checked', false)
+                }
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <div class="tittle-box">
+        <div class="all-checkbox">
+            <input type="checkbox" class="checkall">全选
+        </div>
+        <li>商品</li>
+        <li>单价</li>
+        <li>数量</li>
+        <li>小记</li>
+        <li>操作</li>
+    </div>
+    <form>
+        <input class="check" type="checkbox" name="vehicle" value="Bike">商品1
+        <br>
+        <input class="check" type="checkbox" name="vehicle" value="Car">商品2
+        <br>
+        <input class="check" type="checkbox" name="vehicle" value="Car">商品3
+    </form>
+    <input type="checkbox" class="checkall">全选
+</body>
+
+</html>

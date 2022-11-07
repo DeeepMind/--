@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    var object = {}
+    var str = ('sadawfsakskcakckaxsdwascascf')
+    for (i = 0; i < str.length; i++) {
+      chars = str.charAt(i)
+      if (object[chars]) {
+        object[chars] += 1
+      } else {
+        object[chars] = 1
+      }
+    }
+    var max = 0
+    var maxName = ''
+    for (k in object) {
+      if (max < object[k]) {
+        max = object[k]
+        maxName = k
+      }
+    }
+    console.log('出现次数为；' + max)
+    console.log('出现最多的字母为；' + maxName)
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

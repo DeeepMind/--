@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.w {
+    width: 80vw;
+    margin: auto;
+}
+
+.title {
+    display: inline-block;
+    padding-bottom: 10px;
+    border-bottom: #079436 5px solid;
+    transition: border .3s;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+li {
+    list-style: none;
+}
+
+.header {
+    display: flex;
+    width: 80vw;
+    margin: 0 auto;
+    height: 88px;
+    padding: 15px 30px;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.logo {
+    flex: 0.6;
+}
+
+.logo img {
+    height: 5vw;
+}
+
+.nav {
+    flex: 0.5;
+    display: flex;
+    justify-content: center;
+}
+
+.nav li {
+    margin-right: 3.2vw;
+    font-size: 1.2vw;
+    letter-spacing: 2px;
+}
+
+.banner {
+    position: relative;
+    width: 98vw;
+    height: calc(100vw/3.04);
+    margin: auto;
+    overflow: hidden;
+}
+
+.banner ul {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 700%;
+}
+
+.banner ul li {
+    float: left;
+}
+
+.banner ul li img {
+    width: 98vw;
+}
+
+.pre,
+.next {
+    display: none;
+    position: absolute;
+    top: 48%;
+    width: 2vw;
+    height: 2vw;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.pre a,
+.next a {
+    color: #c0c0c0;
+}
+
+.pre {
+    left: 0;
+}
+
+.pre a:hover,
+.next a:hover {
+    color: #ffff;
+}
+
+.next {
+    right: 0;
+}
+
+.circle {
+    position: absolute;
+    bottom: 20px;
+    left: 46%;
+    width: 8.6vw;
+    margin-left: -50px;
+    text-align: center;
+}
+
+.circle li {
+    display: inline-block;
+    width: 0.6vw;
+    height: 0.6vw;
+    margin-left: 0.6vw;
+    border-radius: 50%;
+    background-color: rgba(148, 145, 145, 0.3);
+}
+
+.circle .select {
+    background-color: #fff;
+}
+
+/* //公司简介 */
+.jianjie {
+    display: flex;
+    justify-content: space-between;
+    height: 400px;
+    margin-top: 50px;
+}
+
+.jianjie_left {
+    flex: 0.2;
+    background-color: #fff;
+    margin-right: 20px;
+    border-radius: 5px;
+    /* text-align: center; */
+}
+
+.jianjie_left .title {
+    text-align: left;
+}
+
+.jianjie_right {
+    flex: 1;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+/* 产品介绍 */
+.canpin {
+    height: 450px;
+    width: 80vw;
+    height: 55vh;
+    margin: 10px auto;
+}
+
+.canpin ul {
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    /* 水平均匀分布 */
+    align-items: center;
+    /* 垂直居中 */
+}
+
+.canpin ul li {
+    flex: .2;
+    display: inline-block;
+    height: 48vh;
+    background-color: #fff;
+    transition: all .3s;
+}
+
+.canpin ul .active {
+    flex: .3;
+    transition: all .3s;
+}
+
+.dizhi {
+    background-color: #fff;
+    height: 30vw;
+    position: relative;
+}
+
+.map {
+    float: left;
+    width: 30vw;
+    height: 30vw;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.xinxi {
+    float: left;
+    margin-left: 8vw;
+}
+
+#user_data {
+    margin-top: 50px;
+}
+
+#user_data input {
+    display: table;
+    width: 20vw;
+    height: 1.5vw;
+}
+
+#user_data textarea {
+    resize: none;
+}
+
+#user_data button {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
+}
+
+.foot {
+    height: 105px;
+    background-color: rgb(66, 66, 66);
+}

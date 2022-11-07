@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--     <script>
+        var num = 100;
+        while (select !== 4) {
+            var select = prompt('1.存钱\n2.取钱\n3.查询余额\n4.退出')
+            select = (select - 0)
+            switch (select) {
+                case 1:
+                    var i = prompt('请输入存入金额')
+                    i = parseFloat(i)
+                    num += i
+                    alert('当前余额为' + num)
+                    break
+                    continue
+                case 2:
+                    var j = prompt('请输入取出金额')
+                    num -= j
+                    alert('当前余额为' + num)
+                    break
+                    continue
+                case 3:
+                    alert('当前余额为' + num)
+                    break
+                    continue
+            }
+        }
+        if (select == 4) {
+            alert('正在退出...')
+        }
+    </script> -->
+  <script>
+    var num = 100;
+    while (num > 0) {
+      var select = prompt('1.存钱\n2.取钱\n3.查询余额\n4.退出')
+      select = (select - 0)
+      if (select == 1) {
+        var i = prompt('请输入存入金额')
+        i = parseFloat(i)
+        num += i
+        alert('当前余额为' + num)
+        continue
+      } else if (select == 2) {
+        var j = prompt('请输入取出金额')
+        num -= j
+        alert('当前余额为' + num)
+        continue
+      } else if (select == 3) {
+        alert('当前余额为' + num)
+        continue
+      } else if (select == 4) {
+        alert('正在退出...')
+        break
+      } else {
+        alert('无效输入')
+        continue
+      }
+    }
+  </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

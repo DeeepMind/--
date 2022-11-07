@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a {
+      text-decoration: none;
+      color: #2c2c2c;
+    }
+
+    .tab {
+      width: auto;
+      height: 80px;
+    }
+
+    .tab li {
+      display: inline-block;
+      float: left;
+      list-style: none;
+      margin-left: 10px;
+    }
+
+    .choose {
+      background-color: rgb(230, 50, 50);
+    }
+
+    .box {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="tab">
+    <ul>
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+      <li><a href="#">Vue</a></li>
+    </ul>
+  </div>
+  <div class="box" style="display: block;">HTML</div>
+  <div class="box">CSS</div>
+  <div class="box">JavaScript</div>
+  <div class="box">Vue</div>
+</body>
+<script>
+  var tab = document.querySelector('.tab')
+  var lis = tab.querySelectorAll('li')
+  var box = document.querySelectorAll('.box')
+  for (i = 0; i < lis.length; i++) {
+    lis[i].setAttribute("index", i)
+    lis[i].onclick = function () {
+      for (j = 0; j < lis.length; j++) {
+        lis[j].className = ''
+      }
+      this.className = 'choose'
+      for (l = 0; l < box.length; l++) {
+        box[l].style.display = 'none'
+      }
+      var index = this.getAttribute('index')
+      console.log(index);
+      box[index].style.display = 'block'
+    }
+  }
+</script>
+
+</html>

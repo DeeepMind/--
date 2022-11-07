@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f2f2f2;
+        }
+
+        .login {
+            position: relative;
+            width: 500px;
+            height: 300px;
+            top: 200px;
+            left: 600px;
+            background-color: #fff;
+            text-align: center;
+            box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, .2);
+            border-radius: 5px;
+        }
+
+        .title {
+            height: 50px;
+            width: 500px;
+            padding-top: 15px;
+            margin-bottom: 35px;
+            line-height: 50px;
+            font-size: 30px;
+            font-weight: 500;
+            background-color: rgba(0, 0, 0, .2);
+        }
+
+        .login label {
+            font-size: 20px;
+        }
+
+        .input {
+            width: 235px;
+            height: 35px;
+            font-size: 16px;
+            border: 1px rgba(24, 24, 24, 0.568) solid;
+            outline: none;
+            padding: 0;
+            border-radius: 5px;
+        }
+
+        .button {
+            width: 60px;
+            height: 35px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login">
+        <div class="content">
+            <div class="title">
+                Login
+            </div>
+            <form action="#">
+                <label for="user">账号</label>
+                <input class="input" type="text" placeholder="请输入账号" id="user" name="user" pattern="[0-9]{10}"
+                    title="请输入0-9的数字"><br><br>
+                <label for="password">密码</label>
+                <input class="input" type="password" placeholder="请输入登录密码" id="password" name="password"><br><br>
+                <input class="button" type="submit" value="登录">
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    var login = document.querySelector('.login')
+    var title = document.querySelector('.title')
+    title.addEventListener('mousedown', function (e) {
+        var x = e.pageX - login.offsetLeft
+        var y = e.pageY - login.offsetTop
+        document.addEventListener('mousemove', move)
+        function move(e) {
+            login.style.left = e.pageX - x + 'px'
+            login.style.top = e.pageY - y + 'px'
+        }
+        document.addEventListener('mouseup', function () {
+            document.removeEventListener('mousemove', move)
+        })
+    })
+
+</script>
+
+</html>
